@@ -1,5 +1,7 @@
 # 🗓️ Dynamische Regression – Prognosen mit bekanntem Kalender
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-dynamic-regression-demo.streamlit.app/)**
+
 Viertes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning. Nachfolger von [Naiver Prognose](https://github.com/sebastian-hanisch/naive-forecast-demo), [Exponentieller Glättung](https://github.com/sebastian-hanisch/exponential-smoothing-demo) und [ARIMA](https://github.com/sebastian-hanisch/arima-demo);
 er behebt die Schwäche, die alle drei teilen: **Feiertage und Aktionen**. Geplant sind sieben weitere Stücke (Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
 
