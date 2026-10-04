@@ -3,7 +3,7 @@
 **[→ Demo live ausprobieren](https://sebastianhanisch-dynamic-regression-demo.streamlit.app/)**
 
 Viertes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning. Nachfolger von [Naiver Prognose](https://github.com/sebastian-hanisch/naive-forecast-demo), [Exponentieller Glättung](https://github.com/sebastian-hanisch/exponential-smoothing-demo) und [ARIMA](https://github.com/sebastian-hanisch/arima-demo);
-er behebt die Schwäche, die alle drei teilen: **Feiertage und Aktionen**. Geplant sind sieben weitere Stücke (Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
+er behebt die Schwäche, die alle drei teilen: **Feiertage und Aktionen**. Die sieben weiteren Stücke (Croston-Verfahren, Boosting, Prognoseintervalle, Hierarchische Abstimmung, Kombination, Prognose → Bestand, ein vortrainiertes Netz) sind inzwischen gebaut.
 
 Die Vorgänger sehen nur die Reihe selbst – obwohl der Kalender und der Aktionsplan **vorab bekannt** sind. Die **dynamische Regression** gibt sie dem Modell als **Regressoren**: Wochentag, Trend, Jahresmuster (Fourier-Paare), Feiertag, Tag nach dem Feiertag, Aktion. Die Koeffizienten werden wie in einer Regression geschätzt (jeder ist ein **Effekt**, den man lesen kann),
 und was übrig bleibt, erklärt ein **ARIMA-Modell für die Fehler**. Die Demo läuft auf **denselben Tagesaufträgen eines Depots** wie die Vorgänger (dieselbe Reihe, im Test auf denselben Fingerabdruck geprüft), im selben Rolling-Origin-Vergleich mit MASE und Orakel-Untergrenze. Alle Daten sind erzeugt, die Rechnung ist in numpy geschrieben; die Kreuzprobe im Test läuft gegen statsmodels.
@@ -107,3 +107,7 @@ streamlit run app.py
 ```
 
 Gebaut mit Streamlit, Plotly und numpy (Kreuzproben im Test: statsmodels, scipy).
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Zeitreihen-Prognose: von Naiv bis Vortraining](https://sebastianhanisch.net/konzepte-zeitreihen-prognose.html).

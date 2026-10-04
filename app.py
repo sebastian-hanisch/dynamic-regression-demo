@@ -56,7 +56,7 @@ Orakel-Untergrenze kommt, ob die geschätzten Effekte stimmen - und wozu die ARI
 )
 st.caption(
     "Viertes Stück der **Zeitreihen-Prognose-Linie** der \"Konzepte\"-Reihe; alle Daten sind erzeugt, die Rechnung ist in numpy geschrieben (die Kreuzprobe im Test läuft gegen statsmodels). "
-    "**Bezug zu OR:** Nachfrageprognosen für Bestand, Personal und Touren brauchen die Kalendereffekte - und die Regression liefert sie als Zahlen, die sich mit dem Fachbereich besprechen lassen (\"eine Aktion bringt +22 %\")."
+    "**Bezug zu OR:** Nachfrageprognosen für Bestand, Personal und Touren brauchen die Kalendereffekte - und die Regression liefert sie als Zahlen, die sich mit dem Fachbereich besprechen lassen (\"eine Aktion bringt +24 %\")."
 )
 
 with st.expander("So funktioniert die dynamische Regression", expanded=True):
@@ -293,7 +293,7 @@ st.markdown(
 | **Erzeugte Reihe, zwölf Seeds** | Das Vehikel kennt genau die Muster, die es erzeugt - die Regressoren passen exakt zur Erzeugung. In echten Reihen ist der Vorsprung kleiner. | – |
 """
 )
-st.caption("Die Linie: Naive Prognose → Exponentielle Glättung → ARIMA → **Dynamische Regression**, dazu Croston, Boosting, Prognoseintervalle, Hierarchie, Kombination, Bestand und ein vortrainiertes Netz (die übrigen Stücke noch nicht gebaut).")
+st.caption("Die Linie: Naive Prognose → Exponentielle Glättung → ARIMA → **Dynamische Regression**, dazu Croston, Boosting, Prognoseintervalle, Hierarchie, Kombination, Bestand und ein vortrainiertes Netz - alle Stücke sind inzwischen gebaut.")
 
 st.markdown("---")
 
@@ -317,6 +317,6 @@ Implementiert in `dr_dynreg.py` (Regressoren, Schätzung, Prognose), `dr_sarima.
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Zeitreihen-Prognose: von Naiv bis Vortraining](https://sebastianhanisch.net/konzepte-zeitreihen-prognose.html)."
 )
