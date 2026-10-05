@@ -62,11 +62,11 @@ Die Preset-Zeilen sind **Einzelreihen** (Seed 3); belastbar sind die Zeilen übe
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Die Regressoren sind auch in der Zukunft bekannt** | Der Kalender ja, der Aktionsplan nur, wenn er vorab feststeht; kennt das Modell die Aktionen nur aus der Vergangenheit, verliert es einen Teil des Vorsprungs (0,746 → 0,786). | Prognose der Regressoren selbst, Szenarien |
-| **Alle wichtigen Einflüsse sind Regressoren** | Ein Niveausprung, eine Wetterlage, ein neuer Kunde: was kein Regressor kennt, landet im Fehler. Mit OLS-Fehlern versagt die Regression dort (1,41), ARIMA(0,1,1)-Fehler fangen es teilweise auf (1,09) – und verschleiern, dass etwas fehlt. | Glättung und ARIMA-Fehler im Verbund, Kombination (geplant) |
-| **Die Effekte sind linear (im Log) und konstant** | Ein Feiertag wirkt hier immer gleich stark und multiplikativ; in echten Reihen hängt er vom Wochentag ab oder ändert sich mit der Zeit. Das Modell schätzt einen Mittelwert. | Boosting mit Kalendermerkmalen (geplant) |
+| **Alle wichtigen Einflüsse sind Regressoren** | Ein Niveausprung, eine Wetterlage, ein neuer Kunde: was kein Regressor kennt, landet im Fehler. Mit OLS-Fehlern versagt die Regression dort (1,41), ARIMA(0,1,1)-Fehler fangen es teilweise auf (1,09) – und verschleiern, dass etwas fehlt. | Glättung und ARIMA-Fehler im Verbund, Kombination (`forecast-combination-demo`) |
+| **Die Effekte sind linear (im Log) und konstant** | Ein Feiertag wirkt hier immer gleich stark und multiplikativ; in echten Reihen hängt er vom Wochentag ab oder ändert sich mit der Zeit. Das Modell schätzt einen Mittelwert. | Boosting mit Kalendermerkmalen (`boosting-forecast-demo`) |
 | **Die Regressoren wurden richtig gewählt** | Zu wenige Fourier-Paare oder ein vergessener Feiertag verzerren die anderen Koeffizienten; der Ljung-Box-Test schlägt bei OLS-Fehlern an, ARIMA-Fehler verschleiern das. | Modellwahl, Diagnose |
-| **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Regression. | Croston, SBA, TSB (geplant) |
-| **Es gibt eine Punktprognose** | Die Fehlerstreuung σ liefert Intervalle, aber nur unter der Annahme normalverteilter Fehler. | Prognoseintervalle (geplant) |
+| **Der Bedarf ist nie null** | Das Log verlangt positive Werte; bei vielen Nullen brechen Log und Regression. | Croston, SBA, TSB (`croston-demo`) |
+| **Es gibt eine Punktprognose** | Die Fehlerstreuung σ liefert Intervalle, aber nur unter der Annahme normalverteilter Fehler. | Prognoseintervalle (`forecast-interval-demo`) |
 | **Erzeugte Reihe, zwölf Seeds** | Das Vehikel kennt genau die Muster, die es erzeugt – die Regressoren passen exakt zur Erzeugung (multiplikative Effekte, ein sinusförmiges Jahresmuster). In echten Reihen ist der Vorsprung kleiner. | – |
 
 ## Tests
