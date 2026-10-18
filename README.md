@@ -71,7 +71,7 @@ Die Preset-Zeilen sind **Einzelreihen** (Seed 3); belastbar sind die Zeilen übe
 
 ## Tests
 
-Pytest-Suite (`pytest tests/ -v`, rund anderthalb Minuten, 109 Tests): Regressoren spaltenweise, gefilterte Kleinste Quadrate gegen numpy und statsmodels (Koeffizienten, Standardfehler), konzentrierte Schätzung gegen die gefilterte Fehlerreihe, Wiedererkennung eines simulierten AR-Fehlerprozesses, Prognose von Hand (Regression, ARMA-Fehler, differenzierte Fehler, Log, unbekannte Aktionen),
+Pytest-Suite (`pytest tests/ -v`, rund anderthalb Minuten, 116 Tests): Regressoren spaltenweise, gefilterte Kleinste Quadrate gegen numpy und statsmodels (Koeffizienten, Standardfehler), konzentrierte Schätzung gegen die gefilterte Fehlerreihe, Wiedererkennung eines simulierten AR-Fehlerprozesses, Prognose von Hand (Regression, ARMA-Fehler, differenzierte Fehler, Log, unbekannte Aktionen),
 Kreuzprobe der Prognose gegen `ARIMA(exog=...)` (vier Fehlermodelle), der ARIMA-Kern aus Stück 3 (Polynome, Differenzen, Sonderfälle, Kreuzprobe), ACF/PACF/Ljung-Box gegen statsmodels, die Reihe (Fingerabdruck wie in den Vorgängern), die wahren Effekte des Vehikels, Auswertung und Experimentzeilen, Preset- und Permalink-Klemmen, AppTest-Rauchtests (Standard, jedes Preset, Regressor- und Fehlerregler, Extremwerte,
 drei Experimente auf Abruf, keine unaufgelösten Platzhalter) und `test_claims.py` (jede Zahl aus diesem README und aus den Preset-Hinweisen; Reihen und Schätzung sind deterministisch, die Bänder großzügiger als die Rundung).
 
