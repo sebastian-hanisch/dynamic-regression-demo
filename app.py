@@ -208,7 +208,7 @@ rows = [{"Verfahren": method_label(m, K), "MASE": de(sm[m]["mase"], 2), "MAE (Au
 st.dataframe(rows, hide_index=True)
 gap_or = u / a.oracle["mase"] - 1
 if u < hw - 0.005:
-    st.success(f"✅ Die dynamische Regression schlägt Holt-Winters: MASE {de(u, 3)} gegen {de(hw, 3)} (SARIMA {de(sa, 2)}, Wochenmittel {de(wm, 2)}) und liegt {pct(gap_or)} über der Orakel-Untergrenze ({de(a.oracle['mase'], 2)}): die bekannten Einflussgrößen tragen den Vorsprung.")
+    st.success(f"✅ Die dynamische Regression schlägt Holt-Winters: MASE {de(u, 3)} gegen {de(hw, 3)} (SARIMA {de(sa, 2)}, Wochenmittel {de(wm, 2)}) und liegt {pct(gap_or)} über der Orakel-Untergrenze ({de(a.oracle['mase'], 2)}): die bekannten Einflussgrößen erklären den Vorsprung.")
 elif u <= hw + 0.005:
     st.info(f"Dynamische Regression und Holt-Winters liegen gleichauf: MASE {de(u, 3)} gegen {de(hw, 3)} (Orakel {de(a.oracle['mase'], 2)}).")
 else:
